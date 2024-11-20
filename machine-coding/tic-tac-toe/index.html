@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f3f4f6;
+      }
+      #game {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .board {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+        gap: 5px;
+      }
+      .cell {
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+        border: 2px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        cursor: pointer;
+      }
+      .cell.x {
+        color: black;
+      }
+      .cell.o {
+        color: black;
+      }
+      .winning-message {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .winning-message.show {
+        display: flex;
+      }
+      #restartButton {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game">
+      <div class="board" id="board">
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+      </div>
+      <div class="winning-message" id="winningMessage">
+        <div data-winning-message-text></div>
+        <button id="restartButton">Restart</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
