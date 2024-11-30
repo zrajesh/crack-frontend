@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import ProgressBar from './components/progressbar';
+import ProgressBar from './components/ProgressBar';
 import './App.css'
 
 const totalMs = 15 * 1000;
