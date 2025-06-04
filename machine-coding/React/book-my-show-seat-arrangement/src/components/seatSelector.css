@@ -1,0 +1,50 @@
+.seat-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .seat-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .row-label {
+    font-weight: bold;
+    width: 20px;
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  .seat {
+    width: 35px;
+    height: 35px;
+    margin: 2px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+    line-height: 35px;
+    font-size: 12px;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .seat.sold {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  
+  .seat.available {
+    background-color: white;
+  }
+
+  .seat.selected {
+    background-color: green;
+    color: white;
+  }
+  
+  .seat.empty {
+    visibility: hidden;
+  }
+  
